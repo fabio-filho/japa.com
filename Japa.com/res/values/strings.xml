@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JAPA.COM</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    
+    
+    <!-- LANGUAGE PORTUGUESE  -->
+    
+    
+    <!-- ACTIVITY MAIN -->
+    <string name="pt_activity_label_welcome">Tá afim de um </string>
+   	<string name="pt_activity_label_japa"> JAPA</string>
+    <string name="pt_activity_label_choose_1">Escolha seu</string>
+    <string name="pt_activity_label_choose_2">Escolha sua</string>
+    <string name="pt_activity_label_state">Estado</string>
+    <string name="pt_activity_label_city">Cidade</string>
+    <string name="pt_activity_label_neighborhood">Bairro</string>    
+    <string name="pt_activity_label_telephone">Telefones:</string>    
+    <string name="pt_activity_button_search">Pesquisar</string>
+    <string name="pt_activity_button_help">Ajuda</string>
+    
+    <!-- END ACTIVITY MAIN -->
+
+</resources>
