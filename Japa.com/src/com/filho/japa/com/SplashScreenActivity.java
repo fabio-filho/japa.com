@@ -1,6 +1,6 @@
 package com.filho.japa.com;
 
-import global_values.Functions;
+
 import global_values.Values;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class SplashScreenActivity extends Activity{
 	
@@ -19,7 +19,7 @@ public class SplashScreenActivity extends Activity{
 		setContentView(R.layout.activity_splash_screen);
 		//Check phone's SDK version.
 		if (Build.VERSION.SDK_INT>=14){
-			
+			//Load title font.
 			int titleId = getResources().getIdentifier("action_bar_title", "id","android");
 		    TextView txt = (TextView) findViewById(titleId);
 			Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);

@@ -10,15 +10,17 @@ import objectsOfLists.Telephone;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import com.filho.japa.com.R;
-
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.util.Log;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.filho.japa.com.R;
 
 public class Functions extends Activity{
 	
@@ -30,7 +32,8 @@ public class Functions extends Activity{
 	///Open warning DIALOG	
 	public static void showWammingDialog(Context context,String msg)
 	{
-		dialog = new ProgressDialog(context);
+		dialog = new ProgressDialog(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+		dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog.setMessage(msg);
         dialog.setCancelable(false);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);

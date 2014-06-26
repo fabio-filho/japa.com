@@ -36,7 +36,8 @@ public class RestaurantsActivity extends Activity{
 	private ListView list;
 	//Threads.
 	Thread thread,timerThread;
-
+	//These TextViews will show titles.
+	private TextView txtJAPA,txtChoose;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class RestaurantsActivity extends Activity{
 		if (Build.VERSION.SDK_INT>=14){
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 			setTitle(Values.TEMP_NAME_NEIGHBORHOOD);
+			//Load title font.
 			int titleId = getResources().getIdentifier("action_bar_title", "id","android");
 		    TextView txt = (TextView) findViewById(titleId);
 		    Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);
@@ -54,9 +56,13 @@ public class RestaurantsActivity extends Activity{
 			
 		}
 		
-		list = (ListView) findViewById(R.id.activity_places_restaurants_listView);
-	
 		
+		//Get the object from UI . 
+		list = (ListView) findViewById(R.id.activity_places_restaurants_listView);
+		txtChoose = (TextView)findViewById(R.id.txtChoose);
+		txtJAPA = (TextView) findViewById(R.id.txtJAPA);
+		
+		//Parameters of query's request.
 		final PostValues[] parameters = new PostValues[3];
 		parameters[1] = new PostValues();
 		parameters[1].field = Values.TEMP_FIELD_CITY;
@@ -131,19 +137,41 @@ public class RestaurantsActivity extends Activity{
 				};
 				
 			};
-			//Checks if has connection with internet.
-			if (!Functions.checkConnectionIntenet((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) 
-			{
-				Toast.makeText(getApplicationContext(), Values.WARNING_NO_CONNECTION_PT, Toast.LENGTH_LONG).show();
-				finish();
-			}
-			else
-			{	
-				thread.start();
-				timerThread.start();
-			}
+			//Check if has internet and block the app if there ins't.
+			checkInternet();
 			
-
+			//Setting font on UI objects.
+			setFont();
+		
+	}
+	
+	
+	private void setFont()
+	{	
+		//Instance font object.
+		Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);
+		//Setting font created for every TextView from UI.
+		txtChoose.setTypeface(tf);
+		txtJAPA.setTypeface(tf);
+	
+	}
+	
+	//Check if has connection with internet and block the app if there ins't.
+	private void checkInternet()
+	{
+		//Checks if has connection with internet.
+		if (!Functions.checkConnectionIntenet((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) 
+		{
+			Toast.makeText(getApplicationContext(), Values.WARNING_NO_CONNECTION_PT, Toast.LENGTH_LONG).show();
+			finish();
+		}
+		else
+		{	
+			//Starting the Query'Thread.
+			thread.start();
+			timerThread.start();
+		}
+		
 	}
 	
 	private void checkIfHasRegistreAndOut()

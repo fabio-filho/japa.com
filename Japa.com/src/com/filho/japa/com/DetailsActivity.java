@@ -53,6 +53,7 @@ public class DetailsActivity extends Activity{
 		
 		if (Build.VERSION.SDK_INT>=14){
 			getActionBar().setDisplayHomeAsUpEnabled(true);
+			//Load title font.
 			int titleId = getResources().getIdentifier("action_bar_title", "id","android");
 		    TextView txt = (TextView) findViewById(titleId);
 		    Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);

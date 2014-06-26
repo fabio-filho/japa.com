@@ -8,7 +8,6 @@ import global_values.PHP;
 import global_values.Values;
 
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 import objectsOfLists.AdapterPlacesListView;
 import objectsOfLists.Places;
@@ -37,7 +36,7 @@ public class StateActivity extends Activity {
 	Thread thread,timerThread;
 	//Information about phone.
 	private TelephonyManager telephonyManager ;
-	//These TextViews will shows titles.
+	//These TextViews will show titles.
 	private TextView txtWelcome,txtJapa,txtState,txtQuestion,txtChoose;
 	
 	
@@ -48,7 +47,7 @@ public class StateActivity extends Activity {
 		setContentView(R.layout.activity_places_state);
 		//Check phone's SDK version.
 		if (Build.VERSION.SDK_INT>=14){
-							
+			//Load title font.				
 			int titleId = getResources().getIdentifier("action_bar_title", "id","android");
 		    TextView txt = (TextView) findViewById(titleId);
 			Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);

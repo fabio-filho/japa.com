@@ -37,7 +37,7 @@ public class NeighborhoodActivity extends Activity{
 	private ListView listNeighborhood;
 	//Threads.
 	Thread thread,timerThread;
-	//These TextViews will shows titles.
+	//These TextViews will show titles.
 	private TextView txttNeighborhood,txtChoose;
 	
 	
@@ -50,7 +50,7 @@ public class NeighborhoodActivity extends Activity{
 		if (Build.VERSION.SDK_INT>=14){
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 			setTitle(Values.TEMP_NAME_CITY);
-			
+			//Load title font.
 			int titleId = getResources().getIdentifier("action_bar_title", "id","android");
 		    TextView txt = (TextView) findViewById(titleId);
 		    Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);

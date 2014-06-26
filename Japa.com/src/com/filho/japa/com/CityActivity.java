@@ -38,7 +38,7 @@ public class CityActivity extends Activity{
 	private ListView listCity;
 	//Threads.
 	Thread thread,timerThread;
-	//These TextViews will shows titles.
+	//These TextViews will show titles.
 	private TextView txtCity,txtChoose;
 
 	
@@ -52,7 +52,7 @@ public class CityActivity extends Activity{
 		if (Build.VERSION.SDK_INT>=14){
 			getActionBar().setDisplayHomeAsUpEnabled(true);
 			setTitle(Values.TEMP_NAME_STATE);
-			
+			//Load title font.
 			int titleId = getResources().getIdentifier("action_bar_title", "id","android");
 		    TextView txt = (TextView) findViewById(titleId);
 		    Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);
@@ -62,8 +62,8 @@ public class CityActivity extends Activity{
 		
 		//Get the object from UI . 
 		listCity = (ListView) findViewById(R.id.activity_places_city_listView);
-		txtChoose = (TextView)findViewById(R.id.txtCity);
-		txtCity = (TextView) findViewById(R.id.txtChoose);
+		txtChoose = (TextView)findViewById(R.id.txtChoose);
+		txtCity = (TextView) findViewById(R.id.txtCity);
 						
 		final PostValues[] parameters = new PostValues[1];					
 									
