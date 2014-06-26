@@ -32,8 +32,7 @@ public class Functions extends Activity{
 	///Open warning DIALOG	
 	public static void showWammingDialog(Context context,String msg)
 	{
-		dialog = new ProgressDialog(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-		dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		dialog = new ProgressDialog(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK);		
         dialog.setMessage(msg);
         dialog.setCancelable(false);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
