@@ -229,7 +229,7 @@ public class RestaurantsActivity extends Activity{
 	public void loadingArrayList(ArrayList<RestaurantItensListView> itens)
 	{
 		mAdapter = new AdapterRestauranteListView
-			(this,itens);
+			(this,itens,getAssets());
 		
 		list.setAdapter(mAdapter);
 		

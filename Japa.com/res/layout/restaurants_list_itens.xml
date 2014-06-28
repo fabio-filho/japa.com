@@ -21,13 +21,13 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5sp"
             android:gravity="center"
-            android:textColor="#FF000000"            
+            android:textColor="#FFFFFF"      
             android:onClick="onClick"
-            android:background="@drawable/color_button_effects_restaurants"
-            	  android:shadowColor="#8B1A1A"
+            android:textSize="22sp"
+            android:background="@drawable/color_button_effects"    	
 				  android:shadowDx="0"
 				  android:shadowDy="0"
-				  android:shadowRadius="2"
+				  android:shadowRadius="0.5"
         />
     </LinearLayout>
 </LinearLayout>

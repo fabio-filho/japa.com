@@ -56,8 +56,7 @@ public class CityActivity extends Activity{
 			int titleId = getResources().getIdentifier("action_bar_title", "id","android");
 		    TextView txt = (TextView) findViewById(titleId);
 		    Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);
-		    txt.setTypeface(tf);
-			
+		    txt.setTypeface(tf);			
 		}
 		
 		//Get the object from UI . 

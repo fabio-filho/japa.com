@@ -1,29 +1,35 @@
 package objectsOfLists;
 
+import global_values.Values;
+
 import java.util.ArrayList;
 
-import com.filho.japa.com.R;
-
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import com.filho.japa.com.R;
 
 public class AdapterRestauranteListView extends BaseAdapter
 {
     private LayoutInflater mInflater;
     private ArrayList<RestaurantItensListView> itens;
+    private AssetManager assets;
  
-    public AdapterRestauranteListView(Context context, ArrayList<RestaurantItensListView> itens)
+    public AdapterRestauranteListView(Context context, ArrayList<RestaurantItensListView> itens, AssetManager assets)
     {
         //Itens que preencheram o listview
         this.itens = itens;
         //responsavel por pegar o Layout do item.
         mInflater = LayoutInflater.from(context);
+        //Asset manager
+        this.assets = assets;
     }
  
     /**
@@ -71,11 +77,14 @@ public class AdapterRestauranteListView extends BaseAdapter
         //infla o layout para podermos preencher os dados
         view = mInflater.inflate(R.layout.restaurants_list_itens, null);
  
-        //atravez do layout pego pelo LayoutInflater, pegamos cada id relacionado
-        //ao item e definimos as informações.
-        ((Button) view.findViewById(R.id.btnRestaurants)).setText(item.getName());
-        ((ImageView) view.findViewById(R.id.image)).setImageResource(item.getImage_id());
- 
+        Typeface tf = Typeface.createFromAsset(assets, Values.FONT_PATH);
+        
+        Button btn = (Button) view.findViewById(R.id.btnRestaurants);
+        btn.setText(item.getName());
+        btn.setTypeface(tf);
+        ImageView img = (ImageView) view.findViewById(R.id.image);
+        img.setImageResource(item.getImage_id());
+        
         return view;
     }
 

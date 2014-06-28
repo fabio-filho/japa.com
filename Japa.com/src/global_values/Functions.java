@@ -28,7 +28,6 @@ public class Functions extends Activity{
 	private static ProgressDialog dialog;	
 	
 	
-	
 	///Open warning DIALOG	
 	public static void showWammingDialog(Context context,String msg)
 	{
