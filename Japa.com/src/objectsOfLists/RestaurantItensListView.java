@@ -4,7 +4,14 @@ import global_values.Functions;
 
 public class RestaurantItensListView {
 
-    private String name,cod;
+    private String name,cod,address;
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	private int image_id;
 	
 	

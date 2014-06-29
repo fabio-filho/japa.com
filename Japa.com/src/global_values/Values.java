@@ -9,6 +9,7 @@ public class Values {
 	URL_TWITTER = "https://mobile.twitter.com/appjapacom",
    
 	URL_GOOGLE_MAPS="https://www.google.com.br/maps/place/",
+	URL_IMAGE_AD = "http://www.appjapa.com/#!japa20/c5hf",
 	WARNING_PLEASE_WAIT_PT = "Aguarde um momento...",
 	WARNING_CHOOSE_BEFORE_ITENS_PT = "Informe antes a sua localização.",
 	WARNING_FAIL_CONNECTION_PT = "Falha na conex�o, tente novamente." ,

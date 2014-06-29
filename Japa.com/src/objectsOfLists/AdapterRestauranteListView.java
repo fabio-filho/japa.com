@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.filho.japa.com.R;
 
@@ -32,11 +33,7 @@ public class AdapterRestauranteListView extends BaseAdapter
         this.assets = assets;
     }
  
-    /**
-     * Retorna a quantidade de itens
-     *
-     * @return
-     */
+
     public int getCount()
     {
         return itens.size();
@@ -47,12 +44,7 @@ public class AdapterRestauranteListView extends BaseAdapter
         return itens.get(position).getCod();
     }
  
-    /**
-     * Retorna o item de acordo com a posicao dele na tela.
-     *
-     * @param position
-     * @return
-     */
+  
     public RestaurantItensListView getItem(int position)
     {
         return itens.get(position);
@@ -96,7 +88,11 @@ public class AdapterRestauranteListView extends BaseAdapter
         btn.setText(item.getName());
         btn.setTypeface(tf);
         ImageView img = (ImageView) view.findViewById(R.id.image);
-        settingImage(position,img);        
+        settingImage(position,img);  
+        TextView txtAddress = (TextView) view.findViewById(R.id.txtAddress);
+        txtAddress.setText(item.getAddress());
+        txtAddress.setTypeface(tf);
+        
         return view;
     }
 

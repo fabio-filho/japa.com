@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pt_activity_label_choose_1"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
           
           	android:textColor="#FFFFFF"
           	android:layout_gravity="left"
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" JAPA"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
        
           	android:textColor="#f81c3b"
           	android:layout_gravity="left"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
           	
           	android:textColor="#FFFFFF"
           	android:layout_gravity="left"
@@ -65,16 +65,15 @@
         
         </LinearLayout>
         
-   
-    
      <ListView
-        	android:id="@+id/activity_places_restaurants_listView"
-        	style="@style/listview_transparent"		
-			 >        
+         android:id="@+id/activity_places_restaurants_listView"
+         style="@style/listview_transparent"
+         >
+        
          	</ListView>
          	
      
-      
+   
       
         
 </LinearLayout>

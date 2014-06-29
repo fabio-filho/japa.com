@@ -28,7 +28,7 @@ android:background="@drawable/rs_background" >
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pt_activity_label_choose_1"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
           	android:layout_marginBottom="15dp"
           	android:textColor="#FFFFFF"
           	android:layout_gravity="left"
@@ -44,7 +44,7 @@ android:background="@drawable/rs_background" >
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Bairro"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
           	android:layout_marginBottom="15dp"
           	android:textColor="#f81c3b"
           	android:layout_gravity="left"
@@ -60,7 +60,7 @@ android:background="@drawable/rs_background" >
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
           	android:layout_marginBottom="15dp"
           	android:textColor="#FFFFFF"
           	android:layout_gravity="left"
@@ -84,7 +84,28 @@ android:background="@drawable/rs_background" >
         
     </LinearLayout>
     
-
+ <!--  IMAGE AD -->
+      		 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"          
+                android:orientation="horizontal"
+          		android:layout_marginTop="15dp"
+          		android:layout_marginBottom="15dp"  
+				>		                
+      		 
+						
+						                     <ImageView
+						                     android:id="@+id/imgAd"
+						                     android:layout_width="0dp"
+						                     android:layout_height="wrap_content"                     
+						                     android:src="@drawable/rs_box_ad"
+						                     android:layout_weight="1"
+						                     android:layout_gravity="center_horizontal"
+						                     android:onClick="onClickAD"
+						                     
+						                     />
+                
+            </LinearLayout>
 
 
 </LinearLayout>

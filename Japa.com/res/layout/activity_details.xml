@@ -186,6 +186,35 @@
       		 
       		 
       		 
+      		  
+      		 <!--  IMAGE AD -->
+      		 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"          
+                android:orientation="horizontal"
+          		android:layout_marginTop="25dp" 
+				>		                
+      		 
+						
+						                 <ImageView
+						                     android:id="@+id/imgAd"
+						                     android:layout_width="0dp"
+						                     android:layout_height="wrap_content"                     
+						                     android:src="@drawable/rs_box_ad"
+						                     android:layout_weight="1"
+						                     android:layout_gravity="center_horizontal"
+						                     android:onClick="onClickAD"
+						                     
+						                     />
+                
+            </LinearLayout>
+      		 
+      		 
+      		 
+      		 
+      		 
+      		 
+      		 
       		 
       		 
       		 
@@ -196,7 +225,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"          
                 android:orientation="horizontal"
-                android:layout_marginTop="60dp" 
+                android:layout_marginTop="25dp" 
                 android:gravity="center_vertical|right"
                 android:background="@drawable/rs_background_social_net">
 

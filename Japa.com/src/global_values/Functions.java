@@ -100,6 +100,7 @@ public class Functions extends Activity{
 					RestaurantItensListView item = new RestaurantItensListView();				
 					item.setCod((json.getJSONObject(i).getString("cod")));
 					item.setName(Functions.tranformToReadable(json.getJSONObject(i).getString("name")));
+					item.setAddress(Functions.tranformToReadable(json.getJSONObject(i).getString("address")));
 					list.add(item);
 				}
 				

@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:textColor="#FFFFFF"
-            android:textSize="22sp"
+            android:textSize="25sp"
             android:background="@drawable/color_button_effects"
             android:onClick="onClick"
             android:gravity="center"

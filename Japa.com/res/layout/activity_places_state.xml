@@ -45,14 +45,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" JAPA"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
             android:textColor="#f81c3b" 
           			
-			  android:shadowColor="#B22222"
-			  android:shadowDx="0"
-			  android:shadowDy="0"
-			  android:shadowRadius="1"
-			 
+	
 			/>
         
         
@@ -61,13 +57,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" ? "
-            android:textSize="23sp" 
+            android:textSize="25sp" 
             android:textColor="#FFFFFF" 
           			
-			  android:shadowColor="#B22222"
-			  android:shadowDx="0"
-			  android:shadowDy="0"
-			  android:shadowRadius="1"
+			  android:shadowColor="#FFFFFF"
+			  android:shadowDx="1"
+			  android:shadowDy="1.5"
+			  android:shadowRadius="2"
 			 
 			/>
          
@@ -101,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pt_activity_label_choose_1"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
             android:textColor="#FFFFFF" 
             
           			
@@ -119,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Estado"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
              android:textColor="#f81c3b" 
           			
 			  android:shadowColor="#B22222"
@@ -132,7 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"
-            android:textSize="23sp" 
+            android:textSize="25sp" 
             android:textColor="#FFFFFF" 
             android:layout_marginBottom="15dp"
           			
@@ -152,8 +148,35 @@
              >
 
     	</ListView>
+    	</LinearLayout>
+    	
+    
         
-    </LinearLayout>
+         <!--  IMAGE AD -->
+      		 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"          
+                android:orientation="horizontal"
+          		android:layout_marginTop="15dp"
+          		android:layout_marginBottom="15dp"  
+				>		                
+      		 
+						    <ImageView
+						                     android:id="@+id/imgAd"
+						                     android:layout_width="0dp"
+						                     android:layout_height="wrap_content"                     
+						                     android:src="@drawable/rs_box_ad"
+						                     android:layout_weight="1"
+						                     android:layout_gravity="center_horizontal"
+						                     android:onClick="onClickAD"
+						                     
+						                     />
+                
+            </LinearLayout>
+      		 
+      		 
+        
+    
 
 
 
