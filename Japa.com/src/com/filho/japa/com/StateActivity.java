@@ -52,7 +52,9 @@ public class StateActivity extends Activity {
 		    TextView txt = (TextView) findViewById(titleId);
 			Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);
 		    txt.setTypeface(tf);					
-		}		
+		}	
+		
+		
 		//Get the object from UI . 
 		listState = (ListView) findViewById(R.id.activity_places_state_listView);
 		txtWelcome = (TextView) findViewById(R.id.txtWelcome);
@@ -61,6 +63,8 @@ public class StateActivity extends Activity {
 		txtChoose = (TextView)findViewById(R.id.txtChoose);
 		txtQuestion = (TextView)findViewById(R.id.txtQuestion);
 				
+		
+		
 	        //Show warning box of Wait.
 			Functions.showWammingDialog(this, Values.WARNING_PLEASE_WAIT_PT);
 			//This thread will make the query in background.

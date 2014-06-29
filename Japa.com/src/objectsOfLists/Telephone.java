@@ -43,9 +43,6 @@ public class Telephone {
 		String newNumber="";
 		
 		
-		
-		
-		
 		for (int index=4 ;index < number.length();index++)
 		{
 			newNumber+=number.charAt(index);

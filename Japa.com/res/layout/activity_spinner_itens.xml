@@ -2,13 +2,10 @@
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
-    android:textSize="28sp"
+    android:textSize="20sp"
+    android:textColor="#FFFFFF"
     android:gravity="center_horizontal"
-    
-    android:shadowColor="#E0FFFF"
-	android:shadowDx="0"
-	android:shadowDy="0"
-    android:shadowRadius="3"
+
     
     >
     

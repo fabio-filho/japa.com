@@ -15,6 +15,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.util.Log;
 import android.view.Window;
 import android.widget.ArrayAdapter;
@@ -31,7 +32,13 @@ public class Functions extends Activity{
 	///Open warning DIALOG	
 	public static void showWammingDialog(Context context,String msg)
 	{
-		dialog = new ProgressDialog(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK);		
+			
+		if (Build.VERSION.SDK_INT>=14){
+			dialog = new ProgressDialog(context,AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+		}
+		else{
+			dialog = new ProgressDialog(context);
+		}
         dialog.setMessage(msg);
         dialog.setCancelable(false);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -163,6 +170,34 @@ public class Functions extends Activity{
 					return list;
 					}
 		
+		
+	
+	///CONVERT JASON TO ONE TELEPHONE
+	public static Telephone convertJsonTo_One_Telephone(String resultConnection)
+				{
+		
+					List<Telephone> list = new ArrayList<Telephone>();
+					
+					try
+					{			
+						JSONArray json= new JSONArray(resultConnection);					
+						
+						for(int i =0; i<json.length();i++)
+						{	
+							Telephone tel = new Telephone();
+							tel.setCod(json.getJSONObject(i).getString("cod"));							
+							tel.setNumber(json.getJSONObject(i).getString("number"));	
+							list.add(tel);
+						}
+						Log.i("FILHO OK JSON TELEPHONE","OKOKOOKOKOKOK");
+					}
+					catch(JSONException o)
+					{
+						Log.i("FILHO ERRO JSON TELEPHONE", o.toString());
+					}
+				
+					return list.get(0);
+					}
 		
 	
 	

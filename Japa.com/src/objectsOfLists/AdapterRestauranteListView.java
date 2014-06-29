@@ -58,33 +58,45 @@ public class AdapterRestauranteListView extends BaseAdapter
         return itens.get(position);
     }
  
-    /**
-     * Sem implementação
-     *
-     * @param position
-     * @return
-     */
+
     public long getItemId(int position)
     {
         return position;
     }
- 
+    
+    //Setting image resource on item.
+    private void settingImage(int position, ImageView img)
+    {
+    	if (position%2 == 0){
+        	
+        	img.setImageResource(R.drawable.rs_btn_hashi_red);
+        }
+        else
+        {
+        	img.setImageResource(R.drawable.rs_btn_hashi_white);
+        }        	
+    	
+    } 
+    
+    
     @Override
     public View getView(int position, View view, ViewGroup parent)
     {
-        //Pega o item de acordo com a posção.
+    	//Take the item by position.
         RestaurantItensListView item = itens.get(position);
-        //infla o layout para podermos preencher os dados
+        
+        //Inflate layout to set data.
         view = mInflater.inflate(R.layout.restaurants_list_itens, null);
- 
+        
+        //Instance font object.
         Typeface tf = Typeface.createFromAsset(assets, Values.FONT_PATH);
         
+        //Instance Button. 
         Button btn = (Button) view.findViewById(R.id.btnRestaurants);
         btn.setText(item.getName());
         btn.setTypeface(tf);
         ImageView img = (ImageView) view.findViewById(R.id.image);
-        img.setImageResource(item.getImage_id());
-        
+        settingImage(position,img);        
         return view;
     }
 

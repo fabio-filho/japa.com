@@ -31,12 +31,8 @@ public class AdapterPlacesListView extends BaseAdapter {
 	        //responsavel por pegar o Layout do item.
 	        mInflater = LayoutInflater.from(context);
 	    }
-	 
-	    /**
-	     * Retorna a quantidade de itens
-	     *
-	     * @return
-	     */
+
+		
 	    public int getCount()
 	    {
 	        return itens.size();
@@ -46,13 +42,8 @@ public class AdapterPlacesListView extends BaseAdapter {
 	    {
 	        return itens.get(position).getCod();
 	    }
-	 
-	    /**
-	     * Retorna o item de acordo com a posicao dele na tela.
-	     *
-	     * @param position
-	     * @return
-	     */
+
+	    
 	    public Places getItem(int position)
 	    {
 	        return itens.get(position);

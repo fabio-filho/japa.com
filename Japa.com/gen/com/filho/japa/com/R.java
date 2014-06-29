@@ -794,10 +794,11 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070003;
+        public static final int abc_search_url_text_holo=0x7f070004;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
+        public static final int transparent=0x7f070003;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -989,18 +990,24 @@ containing a value of this type.
         public static final int ic_action_search=0x7f02005c;
         public static final int ic_launcher=0x7f02005d;
         public static final int rs_background=0x7f02005e;
-        public static final int rs_background_splash=0x7f02005f;
-        public static final int rs_btn_curtir=0x7f020060;
-        public static final int rs_btn_instagram=0x7f020061;
-        public static final int rs_btn_like=0x7f020062;
-        public static final int rs_btn_maps=0x7f020063;
-        public static final int rs_btn_next_list=0x7f020064;
-        public static final int rs_btn_search=0x7f020065;
-        public static final int rs_btn_twitter=0x7f020066;
-        public static final int rs_details_default=0x7f020067;
-        public static final int shape_background=0x7f020068;
-        public static final int shape_button=0x7f020069;
-        public static final int shape_title=0x7f02006a;
+        public static final int rs_background_social_net=0x7f02005f;
+        public static final int rs_background_splash=0x7f020060;
+        public static final int rs_btn_background_telephone=0x7f020061;
+        public static final int rs_btn_curtir=0x7f020062;
+        public static final int rs_btn_facebook=0x7f020063;
+        public static final int rs_btn_hashi_red=0x7f020064;
+        public static final int rs_btn_hashi_white=0x7f020065;
+        public static final int rs_btn_instagram=0x7f020066;
+        public static final int rs_btn_like=0x7f020067;
+        public static final int rs_btn_maps=0x7f020068;
+        public static final int rs_btn_next_list=0x7f020069;
+        public static final int rs_btn_search=0x7f02006a;
+        public static final int rs_btn_twitter=0x7f02006b;
+        public static final int rs_details_default=0x7f02006c;
+        public static final int rs_title_japa=0x7f02006d;
+        public static final int shape_background=0x7f02006e;
+        public static final int shape_button=0x7f02006f;
+        public static final int shape_title=0x7f020070;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1069,11 +1076,11 @@ containing a value of this type.
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
         public static final int split_action_bar=0x7f05001e;
-        public static final int spnTelephone=0x7f050041;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
+        public static final int txtCallTo=0x7f050040;
         public static final int txtChoose=0x7f050046;
         public static final int txtCity=0x7f050047;
         public static final int txtInfo=0x7f05003e;
@@ -1083,7 +1090,7 @@ containing a value of this type.
         public static final int txtNeighborhood=0x7f050049;
         public static final int txtQuestion=0x7f05004f;
         public static final int txtState=0x7f050050;
-        public static final int txtTelephone=0x7f050040;
+        public static final int txtTelephone=0x7f050041;
         public static final int txtWelcome=0x7f05004d;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
@@ -1432,6 +1439,7 @@ containing a value of this type.
          */
         public static final int activity_main_label=0x7f0b0085;
         public static final int activity_main_spinner=0x7f0b0087;
+        public static final int listview_transparent=0x7f0b0088;
     }
     public static final class styleable {
         /**  ============================================ 

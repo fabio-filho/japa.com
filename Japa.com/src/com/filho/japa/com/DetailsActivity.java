@@ -35,14 +35,12 @@ import android.widget.Toast;
 public class DetailsActivity extends Activity{
 
 	
-	private TextView txtName,txtInfo;
-	private ArrayAdapter<Telephone> mAdapter;
-	private List<Telephone> mItens;
-	private Spinner spn;
+	private TextView txtName,txtInfo,txtTelephone,txtCallTo;
 	//Threads.
-	Thread thread,timerThread,thread1;
+	Thread threadTelephone,timerThread,threadDetails;
 	private Telephone telephoneSelected;
 	private String address;
+	private Places resultPlace;
 
 	
 	@Override
@@ -60,26 +58,11 @@ public class DetailsActivity extends Activity{
 		    txt.setTypeface(tf);
 			
 		}
-		 
-		spn = (Spinner) findViewById(R.id.spnTelephone);
 		
-		spn.setOnItemSelectedListener(new OnItemSelectedListener(){
-			
-	
-			public void onItemSelected(
-					android.widget.AdapterView<?> arg0,
-					View arg1, int arg2, long arg3) {
-				
-				telephoneSelected = mAdapter.getItem(arg2);
-			};
-			
-			public void onNothingSelected(android.widget.AdapterView<?> arg0) {
-				
-				
-			};
-			
-		}	
-		);
+		txtName = (TextView) findViewById(R.id.txtName);
+		txtInfo = (TextView) findViewById(R.id.txtInfo);
+		txtTelephone = (TextView) findViewById(R.id.txtTelephone);
+		txtCallTo = (TextView) findViewById(R.id.txtCallTo);
 		
 		ImageView btnLike = (ImageView) findViewById(R.id.btnLike);
 		ImageView btnInstagram = (ImageView) findViewById(R.id.btnInstagram);
@@ -87,8 +70,7 @@ public class DetailsActivity extends Activity{
 		ImageView btnMaps = (ImageView) findViewById(R.id.btnMaps);
 		ImageButton btnCall = (ImageButton) findViewById(R.id.imageDirectCall);
 		
-		
-		
+			
 		
 		btnMaps.setOnClickListener(new OnClickListener() {
 			
@@ -151,6 +133,9 @@ public class DetailsActivity extends Activity{
 			}
 		});
 		
+		
+		Log.i("Tudo OK", "ATE AQUI OK");
+		
 		timerThread = new Thread(){
 			
 			@SuppressWarnings("deprecation")
@@ -163,8 +148,8 @@ public class DetailsActivity extends Activity{
 							{
 								try {
 									if (!Values.STATE_CONNECTING){
-											thread.join();
-											thread1.join();
+											threadTelephone.join();
+											threadDetails.join();
 											finish();
 											Toast.makeText(getApplicationContext(), 
 													Values.WARNING_FAIL_CONNECTION_PT, 
@@ -183,8 +168,7 @@ public class DetailsActivity extends Activity{
 			};
 			
 		};
-		
-		
+				
 		
 		final PostValues[] parameters = new PostValues[1];
 		
@@ -195,7 +179,7 @@ public class DetailsActivity extends Activity{
 		
 		 //SHOW WARMMING BOX PLEASE WAIT
 		Functions.showWammingDialog(this, Values.WARNING_PLEASE_WAIT_PT);
-		thread1 = new Thread()
+		threadDetails = new Thread()
 			{
 				@Override
 				public void run() {
@@ -207,18 +191,17 @@ public class DetailsActivity extends Activity{
 						public void run() {
 						
 							try{								 
-								loadingData(Functions.convertJsonToList_To_Details(result));
+								resultPlace = Functions.convertJsonToList_To_Details(result);
 							}
 							catch(Exception e){
 								Log.i("FABIO ERRO",e.toString());
 							}
 							finally{
 							
-								Functions.closeWammingDialog();
-								
+															
 								//Loading Spinner Telephone
-						        openThread(PHP.php_GET_TELEPHONE, spn, parameters);
-						        thread.start();
+						        openThread(PHP.php_GET_TELEPHONE,parameters);
+						        threadTelephone.start();
 														 
 							}	
 						}
@@ -229,19 +212,42 @@ public class DetailsActivity extends Activity{
 			
 			
 			
-			//Checks if has connection with internet.
-			if (!Functions.checkConnectionIntenet((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) 
-			{
-				Toast.makeText(getApplicationContext(), Values.WARNING_NO_CONNECTION_PT, Toast.LENGTH_LONG).show();
-				finish();
-			}
-			else
-			{					
-				thread1.start();
-				timerThread.start();
-			}
-        
+			//Check if has internet and block the app if there ins't.
+			checkInternet();
 			
+			//Setting font on UI objects.
+			setFont();
+		
+	}
+	
+	
+	private void setFont()
+	{	
+		//Instance font object.
+		Typeface tf = Typeface.createFromAsset(getAssets(), Values.FONT_PATH);
+		//Setting font created for every TextView from UI.
+		txtInfo.setTypeface(tf);
+		txtName.setTypeface(tf);
+		txtTelephone.setTypeface(tf);	
+		txtCallTo.setTypeface(tf);
+	}
+	
+	//Check if has connection with internet and block the app if there ins't.
+	private void checkInternet()
+	{
+		//Checks if has connection with internet.
+		if (!Functions.checkConnectionIntenet((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE))) 
+		{
+			Toast.makeText(getApplicationContext(), Values.WARNING_NO_CONNECTION_PT, Toast.LENGTH_LONG).show();
+			finish();
+		}
+		else
+		{	
+			//Starting the Query'Thread.
+			threadDetails.start();
+			timerThread.start();
+		}
+		
 	}
 	
 	private void cleanTempDataDetails()
@@ -277,12 +283,11 @@ public class DetailsActivity extends Activity{
 	
 	
 	//OPEN THREAD
-	private void openThread(final String php,final Spinner spn,final PostValues[] parameters)
+	private void openThread(final String php,final PostValues[] parameters)
 		{
 			{
-				 //SHOW WARMMING BOX PLEASE WAIT
-				Functions.showWammingDialog(this, Values.WARNING_PLEASE_WAIT_PT);
-				thread = new Thread()
+				 //SHOW WARMMING BOX PLEASE WAIT			
+				threadTelephone = new Thread()
 					{
 						@Override
 						public void run() {
@@ -295,9 +300,8 @@ public class DetailsActivity extends Activity{
 								
 									try{
 										//GET RESULT FINAL OF QUERY
-										mItens = Functions.convertJsonToList_To_Telephone(result);
-										//ADD RESULT TO OBJETO SCREEN
-										creatingBaseForSpinner(spn,mItens);							
+										telephoneSelected = Functions.convertJsonTo_One_Telephone(result);	
+										loadingData();
 									}
 									catch(Exception e){
 										Log.i("FABIO ERRO",e.toString());
@@ -314,38 +318,22 @@ public class DetailsActivity extends Activity{
 		}
 		
 
-		
-		
-	//INSTANCE THE ADAPTER AND ITENS ARRAY
-	private void creatingBaseForSpinner(Spinner spn,List<Telephone> mItens)
-	{			
-			mAdapter = new ArrayAdapter<Telephone>(this,R.layout.activity_spinner_itens,mItens);	
-			spn.setAdapter(mAdapter);
-    }
 	
-	
-	
-	
-	private void loadingData(Places resultPlace)
-	{
-		txtName = (TextView) findViewById(R.id.txtName);
+	//Putting data collected in the activity.
+	private void loadingData()
+	{	
 		
 		txtName.setText(Values.TEMP_NAME_RESTAURANT);
-		
-		txtInfo = (TextView) findViewById(R.id.txtInfo);
-		
+			
 		address = Values.TEMP_NAME_STATE+", "+Values.TEMP_NAME_CITY+", "+
 				Values.TEMP_NAME_NEIGHBORHOOD+", "+resultPlace.getAddress();
 		
 		txtInfo.setText(Values.TEMP_NAME_STATE+", "+Values.TEMP_NAME_CITY+
 				",\n"+Values.TEMP_NAME_NEIGHBORHOOD+", "+resultPlace.getAddress());
 		
+		txtTelephone.setText(telephoneSelected.toString());
 		
-		/*txtAddress.setText();
-		txtCity.setText();
-		txtNeighborhood.setText();
-		txtState.setText();
-		*/
+	
 	}
 	
 }

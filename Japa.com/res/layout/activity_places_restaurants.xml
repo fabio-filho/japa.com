@@ -5,14 +5,7 @@
     android:orientation="vertical"    
    android:background="@drawable/rs_background" >
     
-      <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        
-        android:layout_weight="5"
-        android:gravity="center_horizontal"
-        android:orientation="vertical" >
+
         
       <LinearLayout 
           android:layout_width="fill_parent"
@@ -76,16 +69,12 @@
     
      <ListView
         	android:id="@+id/activity_places_restaurants_listView"
-        	android:layout_width="fill_parent"
-        	android:layout_height="wrap_content"
-        	android:divider="@null"
-			android:dividerHeight="0dp"			
+        	style="@style/listview_transparent"		
 			 >        
          	</ListView>
-      </LinearLayout> 
+         	
+     
       
       
-             	
-    
-
+        
 </LinearLayout>
