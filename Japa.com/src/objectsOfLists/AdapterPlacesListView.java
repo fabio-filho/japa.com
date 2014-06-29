@@ -5,7 +5,7 @@ import global_values.Values;
 
 import java.util.ArrayList;
 
-import com.filho.japa.com.R;
+import com.filhossi.japa.com.R;
 
 import android.content.Context;
 import android.content.res.AssetManager;

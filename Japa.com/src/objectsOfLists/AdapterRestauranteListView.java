@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.filho.japa.com.R;
+import com.filhossi.japa.com.R;
 
 public class AdapterRestauranteListView extends BaseAdapter
 {

@@ -21,7 +21,7 @@ import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.filho.japa.com.R;
+import com.filhossi.japa.com.R;
 
 public class Functions extends Activity{
 	
