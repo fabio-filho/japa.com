@@ -39,6 +39,7 @@ public class AdapterRestauranteListView extends BaseAdapter
         return itens.size();
     }
     
+    
     public String getCod(int position)
     {
         return itens.get(position).getCod();

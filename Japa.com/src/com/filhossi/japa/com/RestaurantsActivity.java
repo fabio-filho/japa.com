@@ -234,5 +234,8 @@ public class RestaurantsActivity extends Activity{
 		list.setAdapter(mAdapter);
 		
 	}
+	
+	
+	
 
 }

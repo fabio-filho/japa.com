@@ -71,7 +71,7 @@ public class NeighborhoodActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				
-				openBrowser(Values.URL_IMAGE_AD);
+				openBrowser(Values.URL_SITE_APP_JAPA);
 			};
 		});
 							
@@ -256,6 +256,7 @@ public class NeighborhoodActivity extends Activity{
 									
 	}
 
-							
+
+						
 							
 }

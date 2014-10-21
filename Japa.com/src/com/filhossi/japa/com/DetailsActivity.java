@@ -32,7 +32,7 @@ public class DetailsActivity extends Activity{
 	//Threads.
 	Thread threadTelephone,timerThread,threadDetails;
 	private Telephone telephoneSelected;
-	private String address;
+	private String address, addressMaps;
 	private Places resultPlace;
 	private ImageView imgAD;
 	
@@ -70,7 +70,7 @@ public class DetailsActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				
-				openBrowser(Values.URL_IMAGE_AD);
+				openBrowser(Values.URL_SITE_APP_JAPA);
 			};
 		});
 		
@@ -81,7 +81,7 @@ public class DetailsActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 			
-				String url = Values.URL_GOOGLE_MAPS+Functions.tranformToGoogleMapsURL(address);
+				String url = Values.URL_GOOGLE_MAPS+Functions.tranformToGoogleMapsURL(addressMaps);
 				openBrowser(url);
 				
 			}
@@ -140,6 +140,18 @@ public class DetailsActivity extends Activity{
 		
 		Log.i("Tudo OK", "ATE AQUI OK");
 		
+		//Load all informations.
+		loadAllInformations();
+		
+		//Setting font on UI objects.
+		setFont();
+		
+	}
+	
+	
+	private void loadAllInformations()
+	{
+
 		timerThread = new Thread(){
 			
 			@SuppressWarnings("deprecation")
@@ -216,19 +228,15 @@ public class DetailsActivity extends Activity{
 			
 			
 			
-			//Check if has internet and block the app if there ins't.
-			checkInternet();
+	    //Check if has internet and block the app if there ins't.
+		checkInternet();
 			
-			//Setting font on UI objects.
-			setFont();
-		
 	}
-	
 	
 	//onClickView IMAGE AD
 	private void onClickAD(View view)
 	{
-		Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse(Values.URL_IMAGE_AD));
+		Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse(Values.URL_SITE_APP_JAPA));
 		startActivity(intent);
 	}
 	
@@ -339,12 +347,18 @@ public class DetailsActivity extends Activity{
 		address = Values.TEMP_NAME_STATE+", "+Values.TEMP_NAME_CITY+", "+
 				Values.TEMP_NAME_NEIGHBORHOOD+", "+resultPlace.getAddress();
 		
+		addressMaps = resultPlace.getAddress()+", "+Values.TEMP_NAME_NEIGHBORHOOD+", "+
+				Values.TEMP_NAME_CITY+", "+Values.TEMP_NAME_STATE;
+		
 		txtInfo.setText(Values.TEMP_NAME_STATE+", "+Values.TEMP_NAME_CITY+
 				",\n"+Values.TEMP_NAME_NEIGHBORHOOD+", "+resultPlace.getAddress());
 		
 		txtTelephone.setText(telephoneSelected.toString());
-		
+		        	
 	
 	}
+	
+
+	
 	
 }

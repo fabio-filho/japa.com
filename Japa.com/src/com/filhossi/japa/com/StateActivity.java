@@ -50,6 +50,7 @@ public class StateActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_places_state);
+		
 		//Check phone's SDK version.
 		if (Build.VERSION.SDK_INT>=14){
 			//Load title font.				
@@ -75,7 +76,7 @@ public class StateActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				
-				openBrowser(Values.URL_IMAGE_AD);
+				openBrowser(Values.URL_SITE_APP_JAPA);
 			};
 		});
 		
@@ -225,6 +226,8 @@ public class StateActivity extends Activity {
 			listState.setAdapter(mAdapter);
 			
 		}
+
+	
 
 	
 	

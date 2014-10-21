@@ -67,7 +67,7 @@ public class CityActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				
-				openBrowser(Values.URL_IMAGE_AD);
+				openBrowser(Values.URL_SITE_APP_JAPA);
 			};
 		});
 				
@@ -214,15 +214,15 @@ public class CityActivity extends Activity{
 	private void cleanTempDataCity()
 	{
 		Values.TEMP_COD_STATE = "";
-		Values.TEMP_NAME_STATE = "";		
-		finish();
+		Values.TEMP_NAME_STATE = "";
 	}
 								
 	@Override
 	public void onBackPressed() {
 		// TODO Auto-generated method stub
 		
-		cleanTempDataCity();		
+		cleanTempDataCity();
+		finish();
 	}
 	
 	@Override
@@ -230,6 +230,8 @@ public class CityActivity extends Activity{
 		if (item.getItemId() == android.R.id.home)
 		{			
 			cleanTempDataCity();
+			finish();
+			
 		}
 			return super.onOptionsItemSelected(item);
 	}
@@ -242,6 +244,7 @@ public class CityActivity extends Activity{
 									
 	}
 
-							
+	
+						
 							
 }

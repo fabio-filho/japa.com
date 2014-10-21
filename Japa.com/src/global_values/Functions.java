@@ -128,9 +128,8 @@ public class Functions extends Activity{
 						{					
 							result.setAddress(Functions.tranformToReadable(json.getJSONObject(i).getString("address")));
 							result.setDescription(Functions.tranformToReadable(json.getJSONObject(i).getString("description")));
-							result.setName(Functions.tranformToReadable(json.getJSONObject(i).getString("name")));	
-							result.setCod_owner(json.getJSONObject(i).getString("cod_owner"));
-							
+							result.setName(Functions.tranformToReadable(json.getJSONObject(i).getString("name")));
+											
 						}
 						
 						Log.i("FILHO FABIO", "OK JSON");	
