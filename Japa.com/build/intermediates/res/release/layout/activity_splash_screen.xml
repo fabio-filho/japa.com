@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/rs_background"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+    
+    <ImageView       
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/rs_background_splash"
+        android:layout_gravity="center"
+        
+        />
+    
+
+</LinearLayout>
+<!-- From: file:/home/fabiofilho/Documents/Projects/Japa.com/Japa.com/res/layout/activity_splash_screen.xml -->

@@ -2,11 +2,8 @@ package global_values;
 
 public class PHP {
 	
-	public final static String 
-	IP_2 = "http://www.dcc.ufrj.br/~fabiofilho/android/php",
-	IP = "http://200.98.66.212/android/php",
-	IP_1 = "http://www.metafiction.com.br/android/php",
-	IP_0 = "http://200.98.66.212/android/php",
+	public final static String
+	IP = "http://104.236.46.185/projects/japacom/php",
 	php_GET_CITY="get_city.php",
 	php_GET_COUNTRY="get_country.php"	,
 	php_GET_NEIGHBORHOOD="get_neighborhood.php",

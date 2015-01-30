@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+     
+    <gradient
+        android:startColor="#FFFAFA"
+        android:endColor="#8B7E66"
+        android:angle="270" />
+     
+
+     
+    <corners
+        android:radius="50dp" />
+     
+    <padding
+        android:left="12dp"
+        android:top="12dp"
+        android:right="12dp"
+        android:bottom="12dp" />
+     
+</shape><!-- From: file:/home/fabiofilho/Documents/Projects/Japa.com/Japa.com/res/drawable/shape_title.xml -->

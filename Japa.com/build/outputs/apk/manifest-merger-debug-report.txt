@@ -1,0 +1,139 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	package
+		ADDED from AndroidManifest.xml:3:5
+	android:versionName
+		ADDED from AndroidManifest.xml:5:5
+	android:versionCode
+		ADDED from AndroidManifest.xml:4:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+uses-sdk
+ADDED from AndroidManifest.xml:7:5
+MERGED from com.android.support:appcompat-v7:19.0.1:18:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:9:9
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:8:9
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:10:5
+	android:name
+		ADDED from AndroidManifest.xml:10:22
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:11:5
+	android:name
+		ADDED from AndroidManifest.xml:11:22
+uses-permission#android.permission.CALL_PHONE
+ADDED from AndroidManifest.xml:12:5
+	android:name
+		ADDED from AndroidManifest.xml:12:22
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:13:5
+	android:name
+		ADDED from AndroidManifest.xml:13:22
+application
+ADDED from AndroidManifest.xml:15:5
+MERGED from com.android.support:appcompat-v7:19.0.1:19:5
+	android:label
+		ADDED from AndroidManifest.xml:18:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:16:9
+	android:icon
+		ADDED from AndroidManifest.xml:17:9
+	android:theme
+		ADDED from AndroidManifest.xml:19:9
+activity#com.filhossi.japa.com.SplashScreenActivity
+ADDED from AndroidManifest.xml:22:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:25:13
+	android:label
+		ADDED from AndroidManifest.xml:24:13
+	android:name
+		ADDED from AndroidManifest.xml:23:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:26:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:27:17
+	android:name
+		ADDED from AndroidManifest.xml:27:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:29:17
+	android:name
+		ADDED from AndroidManifest.xml:29:27
+activity#com.filhossi.japa.com.StateActivity
+ADDED from AndroidManifest.xml:34:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:37:13
+	android:label
+		ADDED from AndroidManifest.xml:36:13
+	android:name
+		ADDED from AndroidManifest.xml:35:13
+intent-filter#android.intent.action.MENU+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:38:13
+action#android.intent.action.MENU
+ADDED from AndroidManifest.xml:39:17
+	android:name
+		ADDED from AndroidManifest.xml:39:25
+category#android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:41:17
+	android:name
+		ADDED from AndroidManifest.xml:41:27
+activity#com.filhossi.japa.com.CityActivity
+ADDED from AndroidManifest.xml:45:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:48:13
+	android:label
+		ADDED from AndroidManifest.xml:47:13
+	android:name
+		ADDED from AndroidManifest.xml:46:13
+intent-filter#android.intent.action.CITY+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:49:13
+action#android.intent.action.CITY
+ADDED from AndroidManifest.xml:50:17
+	android:name
+		ADDED from AndroidManifest.xml:50:25
+activity#com.filhossi.japa.com.NeighborhoodActivity
+ADDED from AndroidManifest.xml:57:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:60:13
+	android:label
+		ADDED from AndroidManifest.xml:59:13
+	android:name
+		ADDED from AndroidManifest.xml:58:13
+intent-filter#android.intent.action.NEIGHBORHOOD+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:61:13
+action#android.intent.action.NEIGHBORHOOD
+ADDED from AndroidManifest.xml:63:17
+	android:name
+		ADDED from AndroidManifest.xml:63:25
+activity#com.filhossi.japa.com.RestaurantsActivity
+ADDED from AndroidManifest.xml:72:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:75:13
+	android:label
+		ADDED from AndroidManifest.xml:74:13
+	android:name
+		ADDED from AndroidManifest.xml:73:13
+intent-filter#android.intent.action.PLACES+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:77:13
+action#android.intent.action.PLACES
+ADDED from AndroidManifest.xml:79:17
+	android:name
+		ADDED from AndroidManifest.xml:79:25
+activity#com.filhossi.japa.com.DetailsActivity
+ADDED from AndroidManifest.xml:87:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:90:13
+	android:label
+		ADDED from AndroidManifest.xml:89:13
+	android:name
+		ADDED from AndroidManifest.xml:88:13
+intent-filter#android.intent.action.DETAILS+android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:92:13
+action#android.intent.action.DETAILS
+ADDED from AndroidManifest.xml:94:17
+	android:name
+		ADDED from AndroidManifest.xml:94:25

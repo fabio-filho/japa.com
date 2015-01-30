@@ -12,8 +12,8 @@ public class Values {
 	URL_SITE_APP_JAPA = "http://www.appjapa.com",
 	WARNING_PLEASE_WAIT_PT = "Aguarde um momento...",
 	WARNING_CHOOSE_BEFORE_ITENS_PT = "Informe antes a sua localiza√ß√£o.",
-	WARNING_FAIL_CONNECTION_PT = "Falha na conex„o, tente novamente." ,
-	WARNING_NO_CONNECTION_PT = "VocÍ est· sem conex„o com a internet, tente novamente." ,
+	WARNING_FAIL_CONNECTION_PT = "Falha na conex√£o, tente novamente." ,
+	WARNING_NO_CONNECTION_PT = "Voc√™ est√° sem conex√£o com a internet, tente novamente." ,
 	WARNING_NOT_REGISTER_YET = "Em breve teremos registros nesse local.";
 	
 
