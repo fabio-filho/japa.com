@@ -1,7 +1,7 @@
 package global_values;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.app.Activity;
+import android.util.Log;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -16,10 +16,8 @@ import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
-import android.app.Activity;
-import android.content.Context;
-import android.telephony.TelephonyManager;
-import android.util.Log;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyDatabase extends Activity{
   	
@@ -38,7 +36,7 @@ public class MyDatabase extends Activity{
 		HttpContext localContext = new BasicHttpContext();
 		HttpResponse response = null;
 		String result = null;
-		
+
 		HttpGet httpget = new HttpGet(
 				PHP.IP+"/"+php+ parameters);
 		
@@ -64,7 +62,7 @@ public class MyDatabase extends Activity{
 		HttpContext localContext = new BasicHttpContext();
 		HttpPost httpPost = new HttpPost(
 				PHP.IP+"/"+php);
-		Log.i("FILHO FABIO", PHP.IP+"/"+php);
+		Log.i("getListFromDatabase", PHP.IP+"/"+php);
 		HttpResponse response = null;
 		
 		try {

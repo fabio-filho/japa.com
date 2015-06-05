@@ -2,15 +2,6 @@ package com.filhossi.japa.com;
 
 
 
-import global_values.Functions;
-import global_values.MyDatabase;
-import global_values.PHP;
-import global_values.Values;
-
-import java.util.ArrayList;
-
-import objectsOfLists.AdapterPlacesListView;
-import objectsOfLists.Places;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -23,11 +14,19 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import global_values.Functions;
+import global_values.MyDatabase;
+import global_values.PHP;
+import global_values.Values;
+import objectsOfLists.AdapterPlacesListView;
+import objectsOfLists.Places;
 
 
 public class StateActivity extends Activity {
@@ -90,8 +89,8 @@ public class StateActivity extends Activity {
 					public void run() {
 						Values.STATE_CONNECTING = true;
 						//Getting result of query.
+						//final String result = MyDatabase.getFromPHP(PHP.php_GET_STATE,null);
 						final String result = MyDatabase.getFromPHP(PHP.php_GET_STATE,null);
-						
 						runOnUiThread(new Runnable() {
 							public void run() {							
 								try{
@@ -100,7 +99,7 @@ public class StateActivity extends Activity {
 									Values.STATE_CONNECTING = true;
 								}
 								catch(Exception e){
-									Log.i("JAPA.COM ERROR STATE ACTIVITY QUERY",e.toString());
+									Log.i("onCreate",e.toString());
 								}
 								finally{Functions.closeWammingDialog();
 								}	

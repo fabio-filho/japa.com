@@ -1,0 +1,24 @@
+table_state.id,table_state.mCode,table_state.mCountry,table_state.mName,table_state.is_active,table_state.created_on,table_state.created_by,table_state.modified_on,table_state.modified_by
+1,19,1,Minas Gerais,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+2,18,1,São Paulo,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+3,15,1,Rio de Janeiro,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+4,20,1,Espírito Santo,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+5,26,1,Santa Catarina,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+6,30,1,Rio Grande do Sul,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+7,32,1,Ceará,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+8,33,1,Alagoas,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+9,35,1,Amazonas,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+10,36,1,Bahia,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+11,37,1,Distrito Federal,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+12,40,1,Goiás,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+13,41,1,Maranhão,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+14,42,1,Mato Grosso,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+15,43,1,Mato Grosso do Sul,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+16,44,1,Pará,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+17,45,1,Paraíba,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+18,46,1,Pernanbuco,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+19,47,1,Piauí,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+20,48,1,Paraná,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+21,49,1,Rondônia,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+22,50,1,Sergipe,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>
+23,51,1,Rio Grande do Norte,True,2015-06-03 02:07:17,<NULL>,2015-06-03 02:07:17,<NULL>

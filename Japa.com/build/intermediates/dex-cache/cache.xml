@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/home/fabiofilho/Documents/Projects/Japa.com/Japa.com/libs/android-support-v4.jar"
+        jar="/home/filhofilha/Documents/Projects/japa.com/Japa.com/libs/android-support-v4.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="cb6883d96005bc85b3e868f204507ea5b4fa9bbf">
-        <dex dex="/home/fabiofilho/Documents/Projects/Japa.com/Japa.com/build/intermediates/pre-dexed/debug/android-support-v4-613d0acd5cc7fec161117f38118e3adb716bb087.jar" />
+        <dex dex="/home/filhofilha/Documents/Projects/japa.com/Japa.com/build/intermediates/pre-dexed/debug/android-support-v4-dfc6fa558e4ae5fba3c2a1bc757a03c1e178b74d.jar" />
     </item>
     <item
-        jar="/home/fabiofilho/Documents/Projects/Japa.com/Japa.com/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.1/classes.jar"
+        jar="/home/filhofilha/Documents/Projects/japa.com/Japa.com/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.0.1/classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="f71a6822470c9eb659d4f4a6cb57b780b35f058b">
-        <dex dex="/home/fabiofilho/Documents/Projects/Japa.com/Japa.com/build/intermediates/pre-dexed/debug/classes-0d7b55da7fbd47d29e255f5df0dbc7deedcab1d7.jar" />
+        <dex dex="/home/filhofilha/Documents/Projects/japa.com/Japa.com/build/intermediates/pre-dexed/debug/classes-ce26e36c02a8cf869317b3ad49349ebf103832cb.jar" />
     </item>
 
 </items>
